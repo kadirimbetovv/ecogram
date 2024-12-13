@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <title>EcoGram - Profile</title>
+    <link rel="stylesheet" href="../css/profile.css">
+    <link href="https://fonts.googleapis.com/css2?family=Helvetica:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+</head>
+<body>
+     <!-- Navigation Bar -->
+     <header>    
+        <a href="index.html" class="logo"><i class='bx bx-spa'></i>EcoGram</a>
+        <ul class="navbar">                
+            <li><a href="index.html" class="home_nav">Home</a></li>
+            <li><a href="chats.html" class="chats_nav">Chats</a></li>
+            <li><a href="groups.html" class="groups_nav">Groups</a></li>
+            <li><a href="challenges.html"class="challenges_nav">Challenges</a></li>
+        </ul>
+        <div class="profile">
+            <img src="../img/davran_profile.jpg" alt="">
+            <a href="profile.html">Username</a>
+        </div>
+    </header>
+
+    <!-- Profile Container -->
+    <div class="profile-container">
+        <div class="cover-photo">
+            <img src="https://via.placeholder.com/800x200" alt="Cover Photo" class="cover-photo-img">
+            <img id="profile-picture" src="https://via.placeholder.com/100" alt="Profile Picture" class="profile-pic">
+        </div>
+
+        <div class="user-info">
+            <h1 id="profile-username" class="username">EcoWarrior42</h1>
+            <p id="profile-bio" class="user-bio">🌿 Passionate about sustainability 🌍 | Plant-based 🌱 | Zero waste enthusiast ♻️</p>
+            <div class="user-stats">
+                <div class="stats-item">
+                    <span class="stats-number">150</span>
+                    <span class="stats-label">Posts</span>
+                </div>
+                <div class="stats-item">
+                    <span class="stats-number">1.2k</span>
+                    <span class="stats-label">Followers</span>
+                </div>
+                <div class="stats-item">
+                    <span class="stats-number">300</span>
+                    <span class="stats-label">Following</span>
+                </div>
+                <div class="stats-item">
+                    <span class="stats-number">5</span>
+                    <span class="stats-label">Leafcoins</span>
+                    <span class="leafcoins"><i class='bx bx-leaf'></i></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="tabs-container">
+            <button class="tab-button active" onclick="openTab('posts')">Posts</button>
+            <button class="tab-button" onclick="openTab('liked')">Liked</button>
+            <button class="tab-button" onclick="openTab('settings')">Settings</button>
+        </div>
+
+
+        <!-- Content Sections -->
+        <div class="tab-content" id="posts">
+            <div class="posts-grid">
+            </div>
+        </div>
+
+        <!-- Liked Posts Section -->
+        <div class="tab-content" id="liked" style="display: none;">
+            <h2>Liked Posts</h2>
+            <div id="liked-posts-grid" class="posts-grid">
+                <p id="no-liked-posts-message">You haven't liked any posts yet.</p>
+            </div>
+        </div>
+        <div class="tab-content" id="settings" style="display: none;">
+            <h2>Edit Profile</h2>
+            <form id="profile-form">
+                <label for="username-input">Username:</label>
+                <input type="text" id="username-input" value="EcoWarrior42">
+
+                <label for="bio-input">Bio:</label>
+                <textarea id="bio-input">🌿 Passionate about sustainability 🌍 | Plant-based 🌱 | Zero waste enthusiast ♻️</textarea>
+
+                <label for="profile-pic-input">Profile Picture URL:</label>
+                <input type="url" id="profile-pic-input" value="">
+
+                <button type="button" onclick="saveProfile()">Save</button>
+            </form>
+        </div>
+        <div class="create-post-container">
+            <h2>Create a New Post</h2>
+            <form id="create-post-form">
+                <label for="post-photo">Upload Photo:</label>
+                <input type="file" id="post-photo" accept="image/*" required>
+
+                <label for="post-caption">Caption:</label>
+                <textarea id="post-caption" placeholder="Write a caption..." required></textarea>
+
+                <button type="button" onclick="createPost()">Post</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="../javascript/profile.js"></script>
+</body>
+</html>

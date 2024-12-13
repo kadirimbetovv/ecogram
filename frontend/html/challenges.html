@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <title>EcoGram - Challenges</title>
+    <link rel="stylesheet" href="../css/challenges.css">
+    <link href="https://fonts.googleapis.com/css2?family=Helvetica:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+</head>
+<body>
+     <!-- Navigation Bar -->
+     <header>    
+        <a href="/html/index.html" class="logo"><i class='bx bx-spa'></i>EcoGram</a>
+        <ul class="navbar">                
+            <li><a href="index.html" class="home_nav">Home</a></li>
+            <li><a href="chats.html" class="chats_nav">Chats</a></li>
+            <li><a href="groups.html" class="groups_nav">Groups</a></li>
+            <li><a href="challenges.html"class="challenges_nav">Challenges</a></li>
+            <li><a href="help.html" class="help_nav">Help</a></li>
+        </ul>
+        <div class="profile">
+            <img src="../img/davran_profile.jpg" alt="">
+            <a href="profile.html">Username</a>
+        </div>
+    </header>
+
+    <!-- Challenges Content -->
+    <main class="main-content">
+        <section class = "challenges" id = "challenges">
+            <h2>Eco Challenges</h2>
+            <div class="challenges-container">
+                <div class="box" onclick="flipCard(this)" data-hashtag="#GreenQuest">
+                    <div class="card-front">
+                        <h2>Green Quest</h2>
+                        <div class="leaves">
+                            <p>Leafcoins: </p>
+                            <i class='bx bx-leaf'></i>
+                            <i class='bx bx-leaf'></i>
+                            <i class='bx bx-leaf'></i>
+                        </div>
+                        <p>Embark on a journey to make eco-friendly choices in daily life, from conserving energy to reducing plastic waste.</p>
+                        <div class="challenge-images">
+                            <img src="../img/greenquest.jpeg" alt="greenquest">
+                            <h3>By December 3, 2024</h3>
+                        </div>
+                    </div>
+                    <div class="card-back">
+                        <h2>Posts for #GreenQuest</h2>
+                        <div class="posts-container" data-challenge="#GreenQuest">
+                            <p class="no-posts-message">No posts yet.</p>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="box" onclick="flipCard(this)" data-hashtag="#EcoAction">
+                    <div class="card-front">
+                        <h2>EcoAction</h2>
+                        <div class="leaves">
+                            <p>Leafcoins: </p>
+                            <i class='bx bx-leaf'></i>
+                            <i class='bx bx-leaf'></i>
+                            <i class='bx bx-leaf'></i>
+                            <i class='bx bx-leaf'></i>
+                        </div>
+                        <p>Take bold actions to protect the environment by implementing sustainable practices at home and in your community.</p>
+                        <div class="challenge-images">
+                            <img src="../img/ecoaction.jpg" alt="ecoaction">
+                            <h3>By January 6, 2025</h3>
+                        </div>
+                    </div>
+                    <div class="card-back">
+                        <h2>Posts for #EcoAction</h2>
+                        <div class="posts-container" data-challenge="#EcoAction">
+                            <p class="no-posts-message">No posts yet.</p>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="box" onclick="flipCard(this)" data-hashtag="#EarthForward">
+                    <div class="card-front">
+                        <h2>Earth Forward</h2>
+                        <div class="leaves">
+                            <p>Leafcoins: </p>
+                            <i class='bx bx-leaf'></i>
+                            <i class='bx bx-leaf'></i>
+                        </div>
+                        <p>Focus on creating a sustainable future by reducing your environmental footprint and inspiring others to do the same.</p>
+                        <div class="challenge-images">
+                            <img src="../img/earthforward.avif" alt="earthforward">
+                            <h3>By December 3, 2024</h3>
+                        </div>
+                    </div>
+                    <div class="card-back">
+                        <h2>Posts for #EarthForward</h2>
+                        <div class="posts-container" data-challenge="#EarthForward">
+                            <p class="no-posts-message">No posts yet.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+    </main>
+</body>
+<script src="../javascript/challenges.js"></script>
+</html>

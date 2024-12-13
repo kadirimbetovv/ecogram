@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    scroll-padding-top: 2rem;
+    scroll-behavior: smooth;
+}
+:root{
+    --green-color: #3cb815;
+    --light-green-color: #c0eb7b;
+    --light-orange-color: #ff7e00;
+    --text-color: #1a2428;
+    --bg-color: #f5f7f6;
+}
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin-top: 80px;
+    background-color: var(--bg-color); 
+}
+
+/* Navigation Bar */
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #2e7d32;
+    box-shadow: 0 8px 11px rgb(14 55 54 / 15%);
+    padding: 20px 100px;
+    transition: 0.5s;
+}
+.profile{
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+    cursor: pointer;
+}
+.profile img{
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+}
+.profile a{
+    font-size: 1rem;
+    font-weight: 500;
+    color: #f5f7f6;
+    padding: 0.5rem 1rem;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #f5f7f6;
+    column-gap: 0.5rem;
+}
+.logo .bx{
+    font-size: 24px;
+    color: var(--light-green-color)
+}
+.navbar{
+    display: flex;
+    column-gap: 0.5rem;
+}
+.navbar a{
+    font-size: 1rem;
+    font-weight: 500;
+    color: #f5f7f6;
+    padding: 0.5rem 1rem;
+}
+.home_nav{
+    background: #31572C;
+    border-radius: 5rem;
+}
+.navbar a:hover{
+    background: #31572C;
+    border-radius: 5rem;
+    transition: background 0.5s;
+}
+
+
+/* Main Content */
+.main-content {
+    display: flex;
+    max-width: 1200px;
+    margin: 20px auto;
+    gap: 20px;
+    padding: 80px 20px;
+}
+
+.feed {
+    flex: 3;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 30px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.feed h2 {
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+/* Post Card */
+.post-card {
+    background-color: #e8f5e9;
+    padding: 15px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.profile-pic {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.post-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.username {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.post-date {
+    font-size: 12px;
+    color: #777;
+}
+
+.post-content {
+    margin-top: 10px;
+}
+
+.post-image {
+    width: 100%;
+    border-radius: 15px;
+    margin-top: 10px;
+}
+
+.post-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.post-actions button {
+    background-color: #2e7d32;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+.post-actions span {
+    margin-top: 7px;
+    color: #2e7d32;
+}
+.post-actions p {
+    margin-top: 7px;
+    color: #2e7d32;
+}
+#comments-section input{
+    margin-top: 7px;
+    background-color:white;
+    color: #2e7d32;
+    border: solid 2px #2e7d32;
+    padding: 8px 15px;
+    border-radius: 15px;
+}
+#comments-section button{
+    margin-top: 7px;
+    background-color:#2e7d32;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 15px;
+}
+.comment {
+    display: flex;
+    align-items: flex-start;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+.comment .profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+  
+.comment .username {
+    font-weight: bold;
+    margin-right: 5px;
+}
+  
+.comment .comment-text {
+    margin: 0;
+}
+/* Sidebar */
+.sidebar {
+    flex: 1;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 30px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h2 {
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.group-card {
+    background-color: #e8f5e9;
+    padding: 15px;
+    border-radius: 20px;
+    margin-bottom: 15px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.group-card h3 {
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+.group-card p {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.group-card button {
+    background-color: #2e7d32;
+    color: white;
+    border: none;
+    padding: 8px 10px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+.group-card a {
+    color: white;
+}

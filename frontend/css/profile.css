@@ -1,0 +1,337 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    scroll-padding-top: 2rem;
+    scroll-behavior: smooth;
+}
+:root{
+    --green-color: #3cb815;
+    --light-green-color: #c0eb7b;
+    --light-orange-color: #ff7e00;
+    --text-color: #1a2428;
+    --bg-color: #f5f7f6;
+}
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin-top: 120px;
+    background-color: var(--bg-color);
+}
+
+/* Navigation Bar */
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #2e7d32;
+    box-shadow: 0 8px 11px rgb(14 55 54 / 15%);
+    padding: 20px 100px;
+    transition: 0.5s;
+}
+.profile{
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+    cursor: pointer;
+}
+.profile img{
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+}
+.profile a{
+    font-size: 1rem;
+    font-weight: 500;
+    color: #f5f7f6;
+    padding: 0.5rem 1rem;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #f5f7f6;
+    column-gap: 0.5rem;
+}
+.logo .bx{
+    font-size: 24px;
+    color: var(--light-green-color)
+}
+.navbar{
+    display: flex;
+    column-gap: 0.5rem;
+}
+.navbar a{
+    font-size: 1rem;
+    font-weight: 500;
+    color: #f5f7f6;
+    padding: 0.5rem 1rem;
+}
+.navbar a:hover{
+    background: #31572C;
+    border-radius: 5rem;
+    transition: background 0.5s;
+}
+/* Profile Container */
+.profile-container {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 30px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Cover Photo and Profile Picture */
+.cover-photo {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    border-radius: 15px 15px 0 0;
+}
+
+.cover-photo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-pic {
+    position: absolute;
+    bottom: -50px;
+    left: 20px;
+    width: 100px;
+    height: 100px;
+    border: 5px solid white;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: #eee;
+}
+
+/* User Info Section */
+.user-info {
+    text-align: center;
+    margin-top: 60px;
+}
+
+.username {
+    font-size: 1.8em;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.user-bio {
+    font-size: 1em;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.user-stats {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.stats-item {
+    text-align: center;
+}
+
+.stats-number {
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+.stats-label {
+    color: #888;
+    font-size: 0.9em;
+}
+
+.tabs-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    gap: 20px;
+}
+
+.tab-button {
+    padding: 10px 20px;
+    background-color: #eee;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    color: #555;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.tab-button.active {
+    background-color: #2e7d32;
+    color: white;
+}
+
+.tab-button:hover {
+    background-color: #d4d4d4;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content#posts {
+    display: block; 
+}
+
+/* Posts Grid */
+.posts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+}
+
+.post-card {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.post-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.post-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 10px;
+    font-size: 0.9em;
+    display: none;
+    border-radius: 0 0 15px 15px;
+}
+.leafcoins {
+    color: #88A350;;
+}
+
+.post-card:hover .post-overlay {
+    display: block;
+    background-color: #2e7d32;
+    color: white;
+    transition: 0.2s;
+}
+
+#profile-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+#profile-form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+#profile-form input[type="text"], 
+#profile-form input[type="url"], 
+#profile-form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    font-size: 1em;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#profile-form textarea {
+    height: 80px;
+    resize: vertical;
+}
+
+#profile-form button {
+    background-color: #388e3c;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 30px;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+
+#profile-form button:hover {
+    background-color: #2e7d32;
+}
+
+/* Create Post Section */
+.create-post-container {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.create-post-container h2 {
+    margin-bottom: 15px;
+}
+
+#create-post-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#create-post-form label {
+    font-weight: bold;
+}
+
+#create-post-form input, #create-post-form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 1em;
+}
+
+#create-post-form button {
+    background-color: var(--green-color);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+#create-post-form button:hover {
+    background-color: var(--light-green-color);
+}
+

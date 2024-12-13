@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoGram - Login</title>
+    <link rel="stylesheet" href="../css/login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Helvetica:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h1>Welcome to EcoGram</h1>
+            <p>Sign in to continue</p>
+            
+            <form id='signinForm' action="/login" method="POST">
+                <div class="input-group">
+                    <div class="input-field">
+                        <i class="bx bx-at"></i>
+                        <input id='username' type="text" name="username" placeholder="Username" required>
+                    </div>
+                    <div class="input-field">
+                        <i class="bx bxs-lock"></i>
+                        <input id='password' type="password" name="password" placeholder="Password" required>
+                    </div>
+                </div>
+                <div class="btn-field">
+                    <button type="submit" class="btn">Sign In</button>
+                </div>
+            </form>
+            
+            <div class="alternate-option">
+                <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+                <button class="help-toggle" onclick="toggleHelp()">Need Help?</button>
+            </div>
+        </div>
+
+        <!-- Help Section -->
+        <div class="help-section" id="help-section" style="display: none;">
+            <h2>How to Sign In</h2>
+            <p>To sign in to EcoGram:</p>
+            <ul>
+                <li>Enter your username in the <strong>Username</strong> field.</li>
+                <li>Type your password in the <strong>Password</strong> field.</li>
+                <li>Click the <strong>Sign In</strong> button to log in.</li>
+            </ul>
+            <button class="close-help" onclick="toggleHelp()">Close Help</button>
+        </div>
+    </div>
+    <script src="../javascript/login.js">
+        
+    </script>
+</body>
+</html>

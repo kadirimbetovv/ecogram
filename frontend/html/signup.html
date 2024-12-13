@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <title>Sign Up - EcoGram</title>
+    <link rel="stylesheet" href="../css/signup.css">
+    <link href="https://fonts.googleapis.com/css2?family=Helvetica:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to EcoGram</h1>
+        <p>Create your account to join the community</p>
+
+        <form id="signupForm" action="http://localhost:3000/signup" method="POST">
+            <div class="input-group">
+                <div class="input-field">
+                    <i class='bx bx-user'></i>
+                    <input id="fullname" type="text" name="fullname" placeholder="Full Name" required>
+                </div>
+
+                <div class="input-field">
+                    <i class="bx bx-envelope"></i>
+                    <input id='email' type="email" name="email" placeholder="Email" required>
+                </div>
+            
+                <div class="input-field">
+                    <i class='bx bx-at'></i>
+                    <input id="username" type="text" name="username" placeholder="Username" required>
+                </div>
+            
+                <div class="input-field">
+                    <i class="bx bxs-lock"></i>
+                    <input id='password' type="password" name="password" placeholder="Enter your password" required>
+                </div>
+            
+            </div>
+            <div class="btn-field">
+                <button type="submit" class="btn">Sign Up</button>
+            </div>
+        </form>
+
+        <div class="alternate-option">
+            <p>Already have an account? <a href="login.html">Sign In</a></p>
+            <button class="help-toggle" onclick="toggleHelp()">Need Help?</button>
+        </div>
+
+        <!-- Help Section -->
+        <div class="help-section" id="help-section" style="display: none;">
+            <h2>How to Sign Up</h2>
+            <p>To create an EcoGram account:</p>
+            <ul>
+                <li>Enter your full name in the <strong>Full Name</strong> field.</li>
+                <li>Provide a valid email address in the <strong>Email</strong> field.</li>
+                <li>Choose a username and enter it in the <strong>Username</strong> field.</li>
+                <li>Set a strong password and enter it in the <strong>Password</strong> field.</li>
+                <li>Click the <strong>Sign Up</strong> button to create your account.</li>
+            </ul>
+            <button class="close-help" onclick="toggleHelp()">Close Help</button>
+        </div>
+    </div>
+    <script src="../javascript/signup.js">
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <title>EcoGram - Home</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Helvetica:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header>    
+        <a href="index.html" class="logo"><i class='bx bx-spa'></i>EcoGram</a>
+        <ul class="navbar">                
+            <li><a href="index.html" class="home_nav">Home</a></li>
+            <li><a href="chats.html" class="chats_nav">Chats</a></li>
+            <li><a href="groups.html" class="groups_nav">Groups</a></li>
+            <li><a href="challenges.html"class="challenges_nav">Challenges</a></li>
+            <li><a href="help.html" class="help_nav">Help</a></li>
+        </ul>
+        <div class="profile">
+            <img src="../img/davran_profile.jpg" alt="">
+            <a href="profile.html" id="username-link"></a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <section class="feed">
+            <h2>Latest Posts</h2>
+            <div id="post" class="post-card">
+                <div class="post-header">
+                    <img src="../img/davran_profile.jpg" alt="User Profile" class="profile-pic">
+                    <div class="post-info">
+                        <h3 class="username">DavranEcoMan</h3>
+                        <p class="post-date">Posted on November 21, 2024</p>
+                    </div>
+                </div>
+                <div class="post-content">
+                    <p>Had an amazing time in a greenhouse today! 🌳🌿 #EcoChallenge</p>
+                    <img src="../img/davran_post.jpg" alt="Post Image" class="post-image">
+                </div>
+                <div class="post-actions">
+                    <button id="like-btn"><i class='bx bx-heart' ></i> Like</button>
+                    <span id="like-count">0</span><p>Likes</p>
+                    <button id="comment-btn"><i class='bx bx-comment' ></i> Comment</button>
+                </div>
+                <div id="comments-section" style="display: none;">
+                    <input type="text" id="comment-input" placeholder="Write a comment...">
+                    <button id="submit-comment-btn">Post</button>
+                    <div id="comments-container"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sidebar Section -->
+        <aside class="sidebar">
+            <h2>Suggested Groups</h2>
+            <div class="group-card">
+                <h3>Tree Lovers 🌲</h3>
+                <p>Join our group to discuss everything about trees and reforestation!</p>
+                <button><a href="groups.html">Join Group</a></button>
+            </div>
+            <div class="group-card">
+                <h3>Zero Waste Warriors ♻️</h3>
+                <p>Tips and discussions on reducing waste and living sustainably.</p>
+                <button><a href="groups.html">Join Group</a></button>
+            </div>
+        </aside>
+    </main>
+</body>
+<script src="../javascript/index.js"></script>
+</html>

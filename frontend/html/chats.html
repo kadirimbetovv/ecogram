@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <title>EcoGram - Chats</title>
+    <link rel="stylesheet" href="../css/chats.css">
+    <link href="https://fonts.googleapis.com/css2?family=Helvetica:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+</head>
+<body>
+     <!-- Navigation Bar -->
+     <header>    
+        <a href="index.html" class="logo"><i class='bx bx-spa'></i>EcoGram</a>
+        <ul class="navbar">                
+            <li><a href="index.html" class="home_nav">Home</a></li>
+            <li><a href="chats.html" class="chats_nav">Chats</a></li>
+            <li><a href="groups.html" class="groups_nav">Groups</a></li>
+            <li><a href="challenges.html"class="challenges_nav">Challenges</a></li>
+            <li><a href="help.html" class="help_nav">Help</a></li>
+        </ul>
+        <div class="profile">
+            <img src="../img/davran_profile.jpg" alt="">
+            <a href="profile.html">Username</a>
+        </div>
+    </header>
+
+    <!-- Main Chat Container -->
+    <div class="chat-container">
+        <aside class="chat-sidebar">
+            <h2>Chats</h2>
+            <ul class="chat-list">
+                <li class="chat-item active">
+                    <img src="https://via.placeholder.com/40" alt="User Image" class="chat-user-pic">
+                    <div class="chat-user-info">
+                        <h4 class="chat-user-name">EcoFriend42</h4>
+                        <p class="last-message">"Hey! Are you joining the event tomorrow?"</p>
+                    </div>
+                </li>
+            </ul>
+        </aside>
+
+        <!-- Main Chat Area -->
+        <section class="chat-main">
+            <div class="chat-header">
+                <img src="https://via.placeholder.com/40" alt="Chat User" class="chat-header-pic">
+                <h3 class="chat-header-name">EcoFriend42</h3>
+            </div>
+            <div class="chat-messages">
+                <div class="message received">
+                    <p class="message-text">Hey! Are you joining the event tomorrow?</p>
+                    <span class="message-time">10:15 AM</span>
+                </div>
+                <div class="message sent">
+                    <p class="message-text">Yes, I'll be there!</p>
+                    <span class="message-time">10:17 AM</span>
+                </div>
+            </div>
+            <div class="chat-input">
+                <input type="text" id="message-input" placeholder="Type your message...">
+                <button id="send-button">Send</button>
+            </div>
+        </section>
+    </div>
+
+    <script src="../javascript/chats.js"></script>
+</body>
+</html>
